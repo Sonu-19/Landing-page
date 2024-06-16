@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*<uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900*/
+
+.montserrat-400 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*#BC8741*/
+.container{
+    background-color: red;
+    height: 100%;
+    background-image: url("./images/background.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    padding:0px 40px;
+}
+
+/*header css*/
+.logo{
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 40px;
+}
+.logo span{
+    color:#BC8741 ;
+}
+
+header nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 2px solid #BC8741;
+
+}
+header nav ul{
+    display: flex;   
+    list-style: none; 
+    gap: 30px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+header nav ul li a:hover{
+    color: #BC8741;
+}
+.bi-list{
+    color: #BC8741;
+    font-size: 35px;
+    display: none;
+}
+/*banner section css*/
+
+.banner{
+    background-image: url("./images/banner.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h1{
+    font-size: 50px;
+    color: white;
+}
+.banner input:focus{
+    outline: none;
+}
+.banner input{
+    border: none;
+    padding: 12px;
+    margin-top: 30px;
+    width: 350px;
+    border-radius: 50px;
+}
+.banner-inner{
+    /* background-color: red; */
+    text-align: center;
+}
+.search i{
+    margin-left: -35px;
+    cursor: pointer;
+}
+/*products section css*/
+/*products Section Left Side css*/
+.products-section{
+    margin-top: 20px;
+    display:flex;
+}
+.products-section .left-side{
+    width: 300px;
+    
+}
+.products-section ul{
+    list-style: none;
+}
+.products-section ul li{
+    margin-bottom: 10px;
+    /* justify-content: right;
+    width: 130px; */
+}
+.products-section ul li a{
+    background-color: #BC8741;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-align: center;
+}
+.products-section ul li a:hover{
+    background-color: #fff;
+    color: #BC8741;
+}
+/*products Section Right Side css*/
+
+.right-side{
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.right-side .box{
+    width: 35%;
+    margin-bottom: 20px;
+    /* border: 1px solid forestgreen;
+    border-radius: 5%; */
+    margin: 10px;
+}
+.right-side .box {
+width: 20%;
+margin-bottom: 20px;
+}
+.right-side .box .image-conatainer {
+    height: 120px;
+}
+.right-side .box .image-conatainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-side .box h3 {
+    margin: 10px 0px;
+    font-size: 14px;
+    
+}
+.right-side .box .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price i{
+    margin-right: 5px;
+    font-size: 15px;
+}
+.price div{
+    background-color: #BC8741;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+/*Tablet IPad */
+@media screen and (max-width: 900px) and (min-width: 601px) {
+    header nav ul{
+        display:none;
+        }
+        .bi-list{
+            display: block;
+        }
+        .banner h1{
+            font-size: 40px;
+            color: white;
+        }
+        .banner{
+            height: 150px;
+        }
+        .banner input{
+            border: none;
+            margin-top: 15px;
+            width: 250px;
+        }
+        .products-section .left-side{
+            width: 100%;     
+            margin-bottom: 20px;   
+        }
+    
+        .right-side .box{
+            width: 40%;
+        }
+}
+/*Mobile*/
+@media screen and (max-width: 600px) and (min-width: 0px) {
+    .container{
+        height: auto;
+    }
+    header nav ul{
+    display:none;
+    }
+    .bi-list{
+        display: block;
+    }
+    .banner h1{
+        font-size: 30px;
+        color: white;
+    }
+    .banner{
+        height: 150px;
+    }
+    .banner input{
+        border: none;
+        margin-top: 15px;
+        width: 250px;
+    }
+    .products-section{
+        flex-direction: column;
+    }
+    .products-section .left-side{
+        width: 100%;     
+        margin-bottom: 20px;   
+    }
+
+    .right-side .box{
+        width: 100%;
+    }
+}
